@@ -1,0 +1,42 @@
+{
+  "name": "spacex-launches-api",
+  "version": "1.0.0",
+  "description": "Must have return spacex launches data",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./build/src/server.js",
+    "dev": "nodemon --watch 'src/' --exec 'ts-node src/app.ts' -e ts",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gallodev/PLG.git"
+  },
+  "keywords": [
+    "spacex"
+  ],
+  "author": "Christian Gallo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gallodev/PLG/issues"
+  },
+  "homepage": "https://github.com/gallodev/PLG#readme",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jest": "^27.2.4",
+    "knex": "^0.95.11",
+    "pg": "^8.7.1",
+    "ts-jest": "^27.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "module": "commonjs",
+    "target": "es5",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "types": ["node", "@types/jest"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+  },
+  "exclude": [
+    "./src/**/*.spec.ts",
+    "node_modules",
+    "./build/**/*"
+  ]    
+}
