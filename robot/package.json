@@ -1,0 +1,23 @@
+{
+  "name": "ong-data-robot",
+  "version": "1.0.0",
+  "description": "ong data robot tem como objetivo realizar webscraping da pagina ongsbrasil.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "start2": "nodemon ./src/index2.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cheerio": "^1.0.0-rc.10",
+    "esm": "^3.2.25",
+    "iconv-lite": "^0.6.3",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

@@ -1,0 +1,39 @@
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=18747&Instituicao=Associacao-Recanto-da-Tidefault.asdefault.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=18747&Instituicao=Associacao-Recanto-da-Tia-Cecilia
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=18747&Instituicao=Associacao  Recanto  da  Tia  Cecilia
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=15617&Instituicao=Associacao-de-Defesa-do-Meio-Ambiente-de-Sumare
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=15617&Instituicao=Associacao-de-Defesa-do-Meio-Ambiente-de-Sumare
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=15617&Instituicao=Associacao de Defesa do Meio Ambiente de Sumare
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=3281&Instituicao=ASSOCIACAO-DE-PAIS-E-AMIGOS-DOS-EXCEPCIONAIS-DE-SUMARE
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=3281&Instituicao=ASSOCIACAO-DE-PAIS-E-AMIGOS-DOS-EXCEPCIONAIS-DE-SUMARE
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=3281&Instituicao=ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE SUMARE
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=6881&Instituicao=ASSOCIACAO-PESTALOZZI-DE-SUMARE
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=6881&Instituicao=ASSOCIACAO-PESTALOZZI-DE-SUMARE
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=6881&Instituicao=ASSOCIACAO PESTALOZZI DE SUMARE
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=19823&Instituicao=associacao-recomecar
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=19823&Instituicao=associacao-recomecar
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=19823&Instituicao=associacao recomecar
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=18289&Instituicao=associacao-vitoria-da-conquista
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=18289&Instituicao=associacao-vitoria-da-conquista
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=18289&Instituicao=associacao vitoria da conquista
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=10797&Instituicao=Centro-de-Convivencia-Infantil-Crianca-Feliz
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=10797&Instituicao=Centro-de-Convivencia-Infantil-Crianca-Feliz
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=10797&Instituicao=Centro de Convivencia Infantil Crianca Feliz
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=15104&Instituicao=CENTRO-EDUCACIONAL-REBOUCAS
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=15104&Instituicao=CENTRO-EDUCACIONAL-REBOUCAS
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=15104&Instituicao=CENTRO EDUCACIONAL REBOUCAS
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=645&Instituicao=DESAFIO-JOVEM-MARANATA
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=645&Instituicao=DESAFIO-JOVEM-MARANATA
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=645&Instituicao=DESAFIO JOVEM MARANATA
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=10708&Instituicao=Entidade-Teste
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=10708&Instituicao=Entidade-Teste
+default.asp?Pag=11&TipoPesquisa=Cidade&PalavraChave=Sumar�
+default.asp?Pag=2&Destino=InstituicoesTemplate&CodigoInstituicao=10708&Instituicao=Entidade Teste
