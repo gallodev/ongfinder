@@ -25,7 +25,7 @@ const getName = ($) => {
 }
 
 const getInfo = () => {
-    console.log('meu pau !')
+    console.log('info !')
 }
 
 
