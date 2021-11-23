@@ -3,7 +3,7 @@ const routes = require('./routes')
 const cors = require('cors')
 const consign = require('consign');
 
-const app = express()
+const app = express();
 
 consign({ verbose: false })
   .then('controllers')
@@ -13,7 +13,7 @@ consign({ verbose: false })
 
 app.use(cors())
 app.use(express.json());
-app.use(routes)
+app.use(routes);
 
 
 export { app };

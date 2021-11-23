@@ -1,25 +1,27 @@
 {
-  "name": "spacex-launches-api",
+  "name": "ongfinder-api",
   "version": "1.0.0",
-  "description": "Must have return spacex launches data",
+  "description": "OngFinder Open Api",
   "main": "server.js",
   "scripts": {
-    "start": "node ./build/server.js",
+    "start": "tsc && node ./build/server.js",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/app.ts' -e ts",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "docker-up": "sudo docker run -p 8080:8080 -d gallodev/ongfinder",
+    "docker-build": "sudo docker build . -t gallodev/ongfinder"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gallodev/PLG.git"
+    "url": "git+https://github.com/gallodev/ongfinder.git"
   },
   "keywords": [
-    "spacex"
+    "ongfinder","ong","ongs"
   ],
   "author": "Christian Gallo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gallodev/PLG/issues"
+    "url": "https://github.com/gallodev/ongfinder/issues"
   },
   "homepage": "https://github.com/gallodev/PLG#readme",
   "dependencies": {
