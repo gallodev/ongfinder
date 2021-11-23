@@ -1,7 +1,7 @@
 
-# 🟢 ONG Finder
+# 🔎 ONG Finder
 
-O ONG Finder tem o objetivo de facilitar a localização de ONG's próximas de sua geolicalização
+O ONG Finder tem o objetivo de facilitar a localização de ONG's próximas de sua geolicalização.
 
 ## 🔗 URL's
 
@@ -26,9 +26,11 @@ Caso queira trocar a porta padrão utilizada pela aplicação.
 
 - Primeiro clonar o projeto `git clone https://github.com/gallodev/ongfinder/api` 
 
-- Entrar no diretório `api` e executar o comando ` `
+- Entrar no diretório `api` e executar o comando `docker-compose up -d` ou `npm run docker-compose` para subir os serviços de banco de dados
 
-Depois em seu navegador acesse [http://localhost:3333](http://localhost:3333) ou a porta personalizada de acordo com o seu env.
+- Após concluir executar o comando `docker run -p 3333:3333 -d gallodev/ongfinder` ou `npm run docker-up`
+
+- Depois em seu navegador acesse [http://localhost:3333](http://localhost:3333) ou a porta personalizada de acordo com o seu env.
 
 - 📁 repositório: [https://github.com/gallodev/ongfinder/api](https://github.com/gallodev/ongfinder/api)
 
