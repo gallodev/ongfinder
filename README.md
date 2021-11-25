@@ -1,26 +1,40 @@
-
 # 🔎 ONG Finder
 
 O ONG Finder tem o objetivo de facilitar a localização de ONG's próximas de sua geolicalização.
 
 ## 🔗 URL's
 
+🌍 [http://ongfinder.azurewebsites.net/](http://ongfinder.azurewebsites.net/)
 
 ## 🛠 Stack
 
+ - Node
+ - Jest
+ - Knex
+ - Selenium
 
 ## ⚠️ Requerimentos
 
 - Node v16+
 - NPM
+- docker & docker-composer
 
 ## 🗃 Variaveis de ambiênte
 
-Caso queira trocar a porta padrão utilizada pela aplicação.
+O arquivo `.env.sample` possui exemplo de env  
 
 | Variable | Description |
 | --- | --- |
 | `PORT` | Define a porta utilizada pelo serviço Sample: PORT=3333 |
+| --- | --- |
+| `DB_HOST` | Define a host de banco de dados: DB_HOST='xxx' |
+| --- | --- |
+| `DB_PASSWORD` | Define o password de banco de dados: DB_PASSWORD='xxx' |
+| --- | --- |
+| `DB_USER` | Define o usuario de banco de dados: DB_USER='xxx' |
+| --- | --- |
+| `DB` | Define o schema banco de dados: DB='xxx' |
+| --- | --- |
 
 ## 🎬 Instalação
 
