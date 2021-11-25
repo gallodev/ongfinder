@@ -24,17 +24,13 @@ O ONG Finder tem o objetivo de facilitar a localização de ONG's próximas de s
 O arquivo `.env.sample` possui exemplo de env  
 
 | Variable | Description |
-| --- | --- |
+| --- | -- |
 | `PORT` | Define a porta utilizada pelo serviço Sample: PORT=3333 |
-| --- | --- |
 | `DB_HOST` | Define a host de banco de dados: DB_HOST='xxx' |
-| --- | --- |
 | `DB_PASSWORD` | Define o password de banco de dados: DB_PASSWORD='xxx' |
-| --- | --- |
 | `DB_USER` | Define o usuario de banco de dados: DB_USER='xxx' |
-| --- | --- |
 | `DB` | Define o schema banco de dados: DB='xxx' |
-| --- | --- |
+|
 
 ## 🎬 Instalação
 
