@@ -1,5 +1,5 @@
-const { RocketService } = require('../services/RocketService');
-const api = RocketService();
+// const { RocketService } = require('../services/RocketService');
+// const api = RocketService();
 
 module.exports = {
     getData : (request, response) => {        
