@@ -1,23 +1,18 @@
 version: '3.6'
 services:
   db:
-    image: mariadb:10.5.4-focal
-    container_name: db
-    volumes:
-      - ./cms/conf/mysql/data/:/var/lsib/mysql/:rw
-      - ./cms/sql/:/docker-entrypoint-initdb.d/:ro
+    image: postgres    
     environment:
-      - MYSQL_ROOT_PASSWORD=0nGf1nd3R4dm1n
-      - MYSQL_USER=ongfinder
-      - MYSQL_PASSWORD=0nGf1nd3R
-      - MYSQL_DATABASE=ongfinder
+      - POSTGRES_USER=ongfinder
+      - POSTGRES_PASSWORD=0nGf1nd3R
+    expose:
+      - "5433"
+    ports:
+      - "5433"
     restart: always
 
   adminer:
-    image: adminer:4.7.7-standalone
-    container_name: adminer
-    links:
-      - db
+    image: adminer        
     ports:
       - 8080:8080
     restart: always
@@ -33,5 +28,4 @@ services:
       - 3333:3333
     links:
       - db
-
-      
+    command: bash - c "sleep 10 && npm run knex migrate:latest --file knexfile.js"
