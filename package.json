@@ -11,8 +11,8 @@
     "build": "tsc",
     "docker-deploy": "npm run build && docker rm -f $(docker ps) && npm run docker-build && npm run docker-up",
     "docker-up": "sudo docker-compose up -d",
-    "docker-build": "rm -rf package-lock.json && tsc && docker build . -t gallodev/ongfinder",
-    "postinstall": "npm run tsc"
+    "docker-build": "rm -rf package-lock.json && npm run build && docker build . -t gallodev/ongfinder",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
