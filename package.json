@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "OngFinder Open Api",
   "main": "server.js",
-  "scripts": {
-    "tsc": "tsc",
+  "scripts": { 
     "start": "npm run tsc && node ./build/src/server.js",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/server.ts' -e ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --maxWorkers=4",
@@ -12,7 +11,9 @@
     "build": "tsc",
     "docker-deploy": "npm run tsc && docker rm -f $(docker ps) && npm run docker-build && npm run docker-up",
     "docker-up": "sudo docker-compose up -d",
-    "docker-build": "rm -rf package-lock.json && tsc && docker build . -t gallodev/ongfinder"
+    "docker-build": "rm -rf package-lock.json && tsc && docker build . -t gallodev/ongfinder",
+    "tsc": "tsc",
+    "postinstall": "npm run tsc"
   },
   "repository": {
     "type": "git",
