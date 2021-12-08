@@ -6,7 +6,7 @@ console.log(database_settings);
 
 module.exports = {    
     client: 'pg',
-    connection: database_settings,
+    connection: process.env.DATABASE_URL,
     pool: { min: 2, max: 7 },
     debug: true,    
     migrations: {      
