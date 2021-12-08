@@ -1,11 +1,13 @@
-// const { RocketService } = require('../services/RocketService');
-// const api = RocketService();
+module.exports = (app) => {            
+    const { models } = app;        
+    const { Ong } = models;     
 
-module.exports = {
-    getData : (request, response) => {        
-        return response.json({
-            status: 200,
-            error: `it's work !`,
-        })        
-    },
+    const getOngs = async () => {        
+        const ongs = await Ong.getOngs(10);         
+        return ongs;
+    }    
+
+    return {
+        getOngs,
+    }
 }

@@ -1,5 +1,4 @@
 import { Knex } from "knex";
-console.log(`testeeee`);
 
 export async function up(knex: Knex): Promise<void> {
     return knex.schema.createTable('users', (table) => {
