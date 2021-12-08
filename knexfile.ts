@@ -1,5 +1,5 @@
 // Update with your config settings.
-const config = require('./config');
+const config = require('./config.ts');
 const database_settings = config().database;
 
 console.log(database_settings);
