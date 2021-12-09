@@ -4,11 +4,11 @@
   "description": "OngFinder Open Api",
   "main": "server.js",
   "scripts": {
-    "start": "npm run build && node ./build/src/server.js",
+    "start": "npm run build && ts-node ./build/src/server.js",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/server.ts' -e ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --maxWorkers=4",
     "coverage": "jest --coverage --maxWorkers=4 --watchAll=false || exit 1 && jest-badges-readme",
-    "build": "tsc",
+    "build": "tsc -p .",
     "docker-deploy": "npm run build && docker rm -f $(docker ps) && npm run docker-build && npm run docker-up",
     "docker-up": "sudo docker-compose up -d",
     "docker-build": "rm -rf package-lock.json && npm run build && docker build . -t gallodev/ongfinder",
@@ -36,13 +36,16 @@
     "consign": "^0.1.6",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "express": "^4.17.1",
     "express-status-monitor": "^1.2.3",
     "helmet": "^4.6.0",
     "knex": "^0.95.14",
     "pg": "^8.7.1",
     "request": "^2.88.2",
-    "ts-jest": "^27.0.5"
+    "ts-jest": "^27.0.5",
+    "typescript-eslint-parser": "^22.0.0"
   },
   "devDependencies": {
     "@olavoparno/jest-badges-readme": "^1.5.1",
