@@ -7,14 +7,15 @@ const consign = require('consign');
 const app = express();
 
 consign({
-  verbose: true,
+  verbose: false,
   cwd: 'src',
-}).include('config.ts')
-  .then('libs/middleware.ts')    
+  extension: 'ts',
+}).include('config')
+  .then('libs')    
   .then('database')  
   .then('models')    
   .then('controllers')      
-  .then('routes.ts')
+  .then('routes')
   .into(app);
 
 app.use(cors())
