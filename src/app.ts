@@ -11,7 +11,7 @@ const swaggerOptions = {
     },
     server: ['localhost:3333']
   },
-  apis: [`${__dirname}/routes/*.ts`]
+  apis: [`${__dirname}/routes/*.ts`,`${__dirname}/routes/*.js`]
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);

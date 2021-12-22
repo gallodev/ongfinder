@@ -1,1 +1,1 @@
-web: npm run dev -p $PORT
+web: npm start -p $PORT
