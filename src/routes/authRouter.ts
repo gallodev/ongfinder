@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+
 import passport from 'passport';
 
 module.exports = (app) => {
@@ -16,6 +16,6 @@ module.exports = (app) => {
       app.post('/auth', passport.authenticate('local', {
         successRedirect: '/doc',
         failureRedirect: '/unathorized',
-        session: false
+        session: true
       }));
 };

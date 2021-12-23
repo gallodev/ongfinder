@@ -41,6 +41,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "express-status-monitor": "^1.2.3",
     "helmet": "^4.6.0",
     "knex": "^0.95.14",

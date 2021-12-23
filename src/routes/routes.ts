@@ -6,8 +6,19 @@ module.exports = (app) => {
 
     const unathorizedPage = (req: Request, res: Response) => {
       return res.status(200).json({
-         status : 'Unathorized' 
+        response: `Sorry, You don't have grant access the resource`,
       })
+    }
+
+    function authenticationMiddleware(req, res, next) {
+      if (req.isAuthenticated()) return next();  
+      return res.status(401).json({        
+        response: 'Must be authenticated to access this router',
+        auth: { 
+          isAuthenticated: req.isAuthenticated(),
+          url: `${process.env.BASE_URL}/auth`
+        }
+     })          
     }
                      
     app.get('/unathorized', unathorizedPage);       
@@ -18,12 +29,12 @@ module.exports = (app) => {
      *  get: 
      *    tags: ['status']
      *    description: Get status dashboard
-     *    responses: 
+     *    responses:     
      *      '200': 
      *        description: Return dashboard kpi's of consume
     */
    
-    app.get('/status/', statusMonitor.pageRoute);    
+    app.use('/status/',authenticationMiddleware, statusMonitor.pageRoute);    
 
   };
   
