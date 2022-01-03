@@ -22,11 +22,6 @@
     "experimentalDecorators": true,
     "sourceMap": false,
   },
-  "include": [
-    "src/**/*",
-    "index.d.ts",   // declaration file path
-    "tokenUtils.d.ts",   // declaration file path
-  ],
   "exclude": [
     "./src/**/*.spec.ts",
     "node_modules",
