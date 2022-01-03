@@ -7,10 +7,10 @@ module.exports = (app) => {
      * /health:
      *  get: 
      *    tags: ['health']
-     *    description: Service Health check
+     *    description: Service health check
      *    responses: 
      *      '200': 
-     *        description: Return API status
+     *        description: Return API work's
     */
    
    app.get('/health',(req: Request,res: Response) => {           

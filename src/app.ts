@@ -7,7 +7,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       title: "Ong Finder API",
-      description: "Ong Finder API data"
+      description: "Ong Finder API swagger definition"
     },
     server: ['localhost:3333']
   },
