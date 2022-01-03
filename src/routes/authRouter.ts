@@ -2,6 +2,7 @@
 import passport from 'passport';
 
 module.exports = (app) => {
+
     /**
      * @swagger
      * /auth:
@@ -15,7 +16,6 @@ module.exports = (app) => {
 
       app.post('/auth', passport.authenticate('local', {
         successRedirect: '/doc',
-        failureRedirect: '/unathorized',
-        session: true
+        failureRedirect: '/unathorized',        
       }));
 };

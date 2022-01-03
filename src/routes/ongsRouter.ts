@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 
 module.exports = (app): void => {
     const { OngController } = app.controllers;
+    const { authMiddleware } = app.libs.authMiddleware;
 
     const ongList = async (req: Request, res: Response) => {     
         
@@ -28,6 +29,8 @@ module.exports = (app): void => {
      *        description: Return data
     */
 
-    app.route('/api/ongs/:id/').get(ongList);   
+    app.use('/api/ongs/:id/',authMiddleware,ongList);
+
+   // app.route('/api/ongs/:id/').get(ongList);   
 
 };

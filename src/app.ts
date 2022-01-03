@@ -35,7 +35,6 @@ consign({
   .into(app);
 
 app.use(cors())
-app.use(express.json());
 app.use('/public',express.static(path.join(__dirname, 'public')));
 app.use('/doc',swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
