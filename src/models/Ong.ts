@@ -2,7 +2,6 @@ module.exports = (app) => {
     const { database } = app;
 
     const getOngs = async (id: number,offset: number,limit: number) => {   
-
         if(id) {
             return await database.connection('ongs').where('id',id).first();
         }

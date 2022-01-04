@@ -33,7 +33,7 @@ module.exports = (app): void => {
      *          description: Type a valid ong_id
      *          paramType: path
      *          required: false
-     *          dataType: string    
+     *          dataType: number    
      *        - name: Type a limit
      *          description: Type a limit to ong result
      *          paramType: query

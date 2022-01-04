@@ -2,8 +2,7 @@ import passport from 'passport';
 const tokenUtils = require('../utils/tokenUtils');
 
 function authMiddleware(req, res, next) {
-    const token = req.headers['x-access-token'];                
-
+    const token = req.headers['x-access-token'];                    
     try{       
       tokenUtils.decodeJWT(token);
       return next()
