@@ -29,7 +29,7 @@ O arquivo `.env.sample` possui exemplo de env
 | `DATABASE_URL` | Define a host de banco de dados: DB_HOST='xxx' |
 | `BASE_URL` | Define a URL principal da aplicação |
 | `SECRET` | JWT secret |
-|
+
 
 ## 🎬 Instalação
 
