@@ -14,7 +14,7 @@ export async function up(knex: Knex): Promise<void> {
         table.string('cod_phone',3).notNullable();
         table.string('phone',13).notNullable();
         table.string('password').notNullable();
-        table.integer('category_id');
+        table.integer('category_id').unsigned();
         table.foreign('category_id').references('id').inTable('ong_category');
     });
 }
