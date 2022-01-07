@@ -26,12 +26,9 @@ module.exports = (app): void => {
     };   
     */
     
-    const create = async (req: Request<{},{},User,queryParams>, res: Response) => {       
-        console.log('este');
-        console.log(config); 
-        console.log(req.body);
+    const create = async (req: Request<{},{},User,queryParams>, res: Response) => {               
         const user = req.body;                                
-        console.log(user);
+        
         try {
             const category_id = await UserController.createUser(user);      
             return res.status(config.STATUS.CREATED).json(category_id);      

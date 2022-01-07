@@ -25,9 +25,7 @@ module.exports = (app) => {
         const data = {
             id: (max_id.id + 1),
             ...ongData,
-        };        
-
-        console.log(data);
+        };                
 
         return await database.connection(entity).insert(data,['id']).into(entity);        
     }
