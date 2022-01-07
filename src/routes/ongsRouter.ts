@@ -1,20 +1,33 @@
 import { Request, Response } from 'express';
+import { Ong } from '../types/';
 
 module.exports = (app): void => {
+    const { config } = app;
     const { OngController } = app.controllers;
     const { authMiddleware } = app.libs.authMiddleware;
 
-    const ongList = async (req: Request, res: Response) => {             
+    const list = async (req: Request, res: Response) => {             
         const { id } = req.params;
         const { offset, limit } = req.query;
         
         try {         
           const ongs = await OngController.getOngs(id,offset,limit);        
-          return res.status(200).json(ongs);
+          return res.status(config.STATUS.OK).json(ongs);
         } catch (error) {                
-          return res.status(500).json({ message: 'Ocorreu uma falha interna no servidor.' });
+          return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     };        
+
+    const create = async (req: Request, res: Response) => {        
+      const OngData: Ong = req.body;                                    
+      try {
+          const ong_id = await OngController.createOng(OngData);      
+          return res.status(config.STATUS.CREATED).json(ong_id);      
+      } catch (error) {
+          console.log(error);
+          return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
+      }
+    }
 
     
     /**
@@ -49,7 +62,8 @@ module.exports = (app): void => {
      *        description: Return ong detail
     */
 
-    app.use('/api/ongs/',authMiddleware,ongList);   
-    app.use('/api/ongs/:id/',authMiddleware,ongList);   
+    app.post('/api/ong',authMiddleware,create)
+    app.use('/api/ongs/',authMiddleware,list);   
+    app.use('/api/ongs/:id/',authMiddleware,list);   
 
 };

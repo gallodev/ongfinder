@@ -12,11 +12,25 @@ export type Ong = {
     readonly category: string,
 }
 
+type RES_Status = {
+    OK : 200,
+    INTERNAL: 500,
+    CREATED: 201,
+    UNATHORIZED: 401,
+} 
+
+
+export interface IConfig {
+    STATUS : RES_Status,
+    INTERAL_ERROR_MSG: string;
+}
+
 export type Category = {
     readonly category: string;
 }
 
 export type User = {
+    readonly id: number,
     readonly name: string,
     readonly cpf: string,
     readonly birthdate: string,

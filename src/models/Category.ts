@@ -1,8 +1,10 @@
+import { Category, queryParams } from '../types/';
+
 module.exports = (app) => {
     const { database } = app;
     const entity = 'ong_category';
 
-    const getOngCategory = async (id: number,offset: number,limit: number) => {
+    const getOngCategory = async ({ id , offset, limit }: queryParams) => {
         if(id) {
             return await database.connection(entity).where("id",id).first();
         }
@@ -18,7 +20,7 @@ module.exports = (app) => {
         return await database.connection(entity).select("id").orderBy("id", "desc").first();
     }
 
-    const createCategory = async (category: string) => {    
+    const createCategory = async (category: Category) => {    
         const max_id = await getMaxId();        
         const data = {
             id: (max_id.id + 1),

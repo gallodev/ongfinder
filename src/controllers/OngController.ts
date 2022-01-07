@@ -1,13 +1,16 @@
+
+import { Ong, queryParams } from '../types/';
+
 module.exports = (app) => {            
     const { models } = app;        
     const { Ong, Category } = models;         
 
-    const getOngs = async (id: number,offset: number = 0,limit: number = 10) => {        
+    const getOngs = async ({ id, offset, limit } : queryParams) => {        
         const ongs = await Ong.getOngs(id,offset,limit);         
         return ongs;
     }    
 
-    const getOngCategorys = async (id: number, offset: number = 0, limit:number = 10) => {
+    const getOngCategorys = async ({ id, offset, limit } : queryParams) => {
         const categorys = await Category.getOngCategory(id,offset,limit);
         return categorys;
     }
@@ -17,9 +20,15 @@ module.exports = (app) => {
         return category_id[0];
     }
 
+    const createOng = async (data: Ong) => {
+        const ong_id = await Ong.createOng(data);
+        return ong_id[0];
+    }
+
     return {
         getOngs,
         getOngCategorys,
-        createCategory
+        createCategory,
+        createOng
     }
 }

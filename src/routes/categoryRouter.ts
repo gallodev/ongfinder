@@ -11,9 +11,9 @@ module.exports = (app): void => {
         
         try {         
           const category = await OngController.getOngCategorys(id,offset,limit);        
-          return res.status(200).json(category);
+          return res.status(config.STATUS.OK).json(category);
         } catch (error) {                
-          return res.status(500).json({ message: config.INTERAL_ERROR_MSG });
+          return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     };   
     
@@ -21,10 +21,10 @@ module.exports = (app): void => {
         const { category } = req.body;                        
         try {
             const category_id = await OngController.createCategory(category);      
-            return res.status(200).json(category_id);      
+            return res.status(config.STATUS.OK).json(category_id);      
         } catch (error) {
             console.log(error);
-            return res.status(500).json({ message: config.INTERAL_ERROR_MSG });
+            return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     }
     
