@@ -46,7 +46,7 @@ module.exports = (app): void => {
      *          required: false
      *          dataType: string         
      *    responses: 
-     *      '200': 
+     *      '201': 
      *        description: Return category id
      *      '500':
      *        description: Something went wrong with backend

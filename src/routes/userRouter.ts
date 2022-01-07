@@ -27,13 +27,11 @@ module.exports = (app): void => {
     */
     
     const create = async (req: Request<{},{},User,queryParams>, res: Response) => {               
-        const user = req.body;                                
-        
+        const user = req.body;                                        
         try {
             const category_id = await UserController.createUser(user);      
             return res.status(config.STATUS.CREATED).json(category_id);      
-        } catch (error) {
-            console.log(error);
+        } catch (error) {            
             return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     }
@@ -43,7 +41,7 @@ module.exports = (app): void => {
      *  /api/user:
      *  post: 
      *    tags: ['user']
-     *    description: Get category list or specific filter by id
+     *    description: Add a new User
      *    parameters:
      *        - name: x-access-token
      *          description: Type a valid JWT
@@ -58,5 +56,4 @@ module.exports = (app): void => {
     */
 
     app.post('/api/user/',authMiddleware,create); 
-
 };
