@@ -1,30 +1,53 @@
 import { Request, Response } from 'express';
-import { Ong } from '../types/';
+import { Ong, queryParams } from '../types/';
 
 module.exports = (app): void => {
-    const { config } = app;
+    const { config } = app.config;
     const { OngController } = app.controllers;
     const { authMiddleware } = app.libs.authMiddleware;
 
-    const list = async (req: Request, res: Response) => {             
-        const { id } = req.params;
-        const { offset, limit } = req.query;
-        
-        try {         
-          const ongs = await OngController.getOngs(id,offset,limit);        
+    const listById = async (req: Request<{id: number}>, res: Response) => {                   
+      const { id } = req.params;      
+
+      const params: queryParams = {
+        id,        
+      };
+      
+      try {             
+        const ongs = await OngController.getOngsById(params);        
+        return res.status(config.STATUS.OK).json(ongs);
+      } catch (error) {               
+        console.log(error);
+        return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
+      }
+  };     
+
+    const list = async (req: Request<{},{},{},queryParams>, res: Response) => {            
+        const { offset, limit } = req.query;        
+        const params: queryParams = {
+          offset,
+          limit
+        };
+
+        try {               
+          const ongs = await OngController.getOngs(params);        
           return res.status(config.STATUS.OK).json(ongs);
-        } catch (error) {                
+        } catch (error) {                 
+          console.log(error);
           return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     };        
 
-    const create = async (req: Request, res: Response) => {        
-      const OngData: Ong = req.body;                                    
+    const create = async (req: Request<{},{},Ong>, res: Response) => {        
+      const OngData: Ong = req.body;    
+      console.log(OngData);
       try {
           const ong_id = await OngController.createOng(OngData);      
           return res.status(config.STATUS.CREATED).json(ong_id);      
       } catch (error) {
           console.log(error);
+          console.log('teste')
+          console.log(config);
           return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
       }
     }
@@ -64,6 +87,6 @@ module.exports = (app): void => {
 
     app.post('/api/ong',authMiddleware,create)
     app.use('/api/ongs/',authMiddleware,list);   
-    app.use('/api/ongs/:id/',authMiddleware,list);   
+    app.use('/api/ong/:id/',authMiddleware,listById);   
 
 };

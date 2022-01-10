@@ -1,18 +1,41 @@
 import { Request, Response } from 'express';
+import { queryParams } from '../types';
 
 module.exports = (app): void => {
     const { OngController } = app.controllers;
     const { authMiddleware } = app.libs.authMiddleware;
     const { config } = app.config;
 
-    const list = async (req: Request, res: Response) => {           
-        const { id } = req.params;
+
+    const listById = async (req: Request<{id: number}>, res: Response) => {                   
+        const { id } = req.params;      
+  
+        const params: queryParams = {
+          id,        
+        };
+        
+        try {             
+          const ongs = await OngController.getOngCategoryById(params);        
+          return res.status(config.STATUS.OK).json(ongs);
+        } catch (error) {               
+          console.log(error);
+          return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
+        }
+    };     
+
+    const list = async (req: Request<{},{},{},queryParams>, res: Response) => {                   
         const { offset, limit } = req.query;
+
+        const params: queryParams = {            
+            offset,
+            limit
+        }
         
         try {         
-          const category = await OngController.getOngCategorys(id,offset,limit);        
+          const category = await OngController.getOngCategorys(params);        
           return res.status(config.STATUS.OK).json(category);
-        } catch (error) {                
+        } catch (error) { 
+          console.log(error);
           return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     };   
@@ -85,6 +108,6 @@ module.exports = (app): void => {
 
     app.post('/api/category/',authMiddleware,create);       
     app.get('/api/category/',authMiddleware,list);
-    app.get('/api/category/:id',authMiddleware,list);         
+    app.get('/api/category/:id',authMiddleware,listById);         
 
 };

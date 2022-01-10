@@ -1,4 +1,5 @@
 export type Ong = {
+    readonly id: number,
     readonly ong_name: string,
     readonly ong_manager: string,
     readonly ong_mail: string,
@@ -26,6 +27,7 @@ export interface IConfig {
 }
 
 export type Category = {
+    readonly id: number;
     readonly category: string;
 }
 
