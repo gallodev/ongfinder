@@ -6,6 +6,7 @@ export async function up(knex: Knex): Promise<void> {
         table.string('ong_name').notNullable();
         table.string('ong_manager').notNullable();
         table.string('ong_mail').notNullable();
+        table.string('description');
         table.string('zipcode',10).notNullable();
         table.string('address').notNullable();
         table.integer('number').notNullable();
