@@ -16,8 +16,7 @@ module.exports = (app): void => {
       try {             
         const ongs = await OngController.getOngsById(params);        
         return res.status(config.STATUS.OK).json(ongs);
-      } catch (error) {               
-        console.log(error);
+      } catch (error) {                       
         return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
       }
   };     
@@ -32,22 +31,18 @@ module.exports = (app): void => {
         try {               
           const ongs = await OngController.getOngs(params);        
           return res.status(config.STATUS.OK).json(ongs);
-        } catch (error) {                 
-          console.log(error);
+        } catch (error) {                           
           return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
         }
     };        
 
     const create = async (req: Request<{},{},Ong>, res: Response) => {        
       const OngData: Ong = req.body;    
-      console.log(OngData);
+      
       try {
           const ong_id = await OngController.createOng(OngData);      
           return res.status(config.STATUS.CREATED).json(ong_id);      
-      } catch (error) {
-          console.log(error);
-          console.log('teste')
-          console.log(config);
+      } catch (error) {      
           return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
       }
     }
@@ -85,7 +80,7 @@ module.exports = (app): void => {
      *        description: Return ong detail
     */
 
-    app.post('/api/ong',authMiddleware,create)
+    app.post('/api/ong',create)
     app.use('/api/ongs/',authMiddleware,list);   
     app.use('/api/ong/:id/',authMiddleware,listById);   
 

@@ -9,9 +9,9 @@ module.exports = (app) => {
     }
 
     const createUser = async (userData: User) => {    
-        const max_id = await getMaxId();        
+        const { id } = await getMaxId();        
         const data = {
-            id: (max_id.id + 1),
+            id: (id + 1),
             ...userData,
         };                
 

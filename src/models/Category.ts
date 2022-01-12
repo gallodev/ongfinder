@@ -23,9 +23,9 @@ module.exports = (app) => {
     }
 
     const createCategory = async (category: Category): Promise<Category> => {    
-        const max_id = await getMaxId();        
+        const { id } = await getMaxId();        
         const data = {
-            id: (max_id.id + 1),
+            id: (id + 1),
             category: category
         };        
 

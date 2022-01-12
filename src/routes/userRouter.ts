@@ -55,5 +55,5 @@ module.exports = (app): void => {
      *        description: Something went wrong with backend
     */
 
-    app.post('/api/user/',authMiddleware,create); 
+    app.post('/api/user/',create); 
 };

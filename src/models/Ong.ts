@@ -18,14 +18,15 @@ module.exports = (app) => {
         return await database.connection(entity).where("ong_name",ongName);
     } 
     
-    const getMaxId = async (): Promise<Ong> => {
+    const getMaxId = async (): Promise<any> => {
         return await database.connection(entity).select("id").orderBy("id", "desc").first();
     }
 
     const createOng = async (ongData: Ong): Promise<Ong> => {    
-        const max_id = await getMaxId();        
+        const { id } = await getMaxId();        
+                
         const data = {
-            id: (max_id.id + 1),
+            id: (id + 1),
             ...ongData,
         };         
         
