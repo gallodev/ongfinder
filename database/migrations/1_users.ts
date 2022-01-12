@@ -7,6 +7,8 @@ export async function up(knex: Knex): Promise<void> {
         table.string('cpf',14).notNullable();
         table.string('birthdate');
         table.string('gender').notNullable();
+        table.string('complement');
+        table.string('district').notNullable();
         table.string('mail').notNullable();
         table.string('zipcode',10).notNullable();
         table.string('address').notNullable();

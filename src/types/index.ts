@@ -41,6 +41,8 @@ export type User = {
     readonly zipcode: number,
     readonly address: string,
     readonly number: number,
+    readonly complement: string;
+    readonly district: string;
     readonly state: string,
     readonly city: string,
     readonly codPhone: string,
