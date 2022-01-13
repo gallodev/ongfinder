@@ -42,7 +42,7 @@ module.exports = (app): void => {
     
     const create = async (req: Request, res: Response) => {        
         const { category } = req.body;                        
-        console.log('ae');
+        
         try {
             const category_id = await OngController.createCategory(category);      
             return res.status(config.STATUS.OK).json(category_id);      
@@ -109,6 +109,6 @@ module.exports = (app): void => {
 
     app.post('/api/category/',create);       
     app.get('/api/category/',authMiddleware,list);
-    app.get('/api/category/:id',authMiddleware,listById);         
+    app.get('/api/category/:id',listById);         
 
 };
