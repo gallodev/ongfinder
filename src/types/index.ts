@@ -29,6 +29,8 @@ export interface IConfig {
 export type Category = {
     readonly id: number;
     readonly category: string;
+    readonly textName: string;
+    readonly ling: string;
 }
 
 export type User = {
