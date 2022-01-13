@@ -20,7 +20,8 @@ export async function seed(knex: Knex): Promise<void> {
             cod_phone: 11,
             phone: 998999,
             password: 121212,
-            category_id: 1
+            category_id: 1,
+            cnpj: '41.624.523/0001-96',
         },
         {
             id: 2,
@@ -35,7 +36,8 @@ export async function seed(knex: Knex): Promise<void> {
             cod_phone: 11,
             phone: 998999,
             password: 121212,
-            category_id: 1
+            category_id: 1,
+            cnpj: '41.624.523/0001-96',
         },
         {
             id: 3,
@@ -50,7 +52,8 @@ export async function seed(knex: Knex): Promise<void> {
             cod_phone: 11,
             phone: 998999,
             password: 121212,
-            category_id: 1
+            category_id: 1,
+            cnpj: '41.624.523/0001-96',
         }
     ]);
 };

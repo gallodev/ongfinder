@@ -6,11 +6,14 @@ export type Ong = {
     readonly zipcode: string,
     readonly address: string,
     readonly number: number,
+    readonly district: string,
     readonly state: string;
     readonly city: string,
     readonly cod_phone: string,
     readonly phone: string,
     readonly category: string,
+    readonly cnpj: string,
+    readonly complement: string,
 }
 
 type RES_Status = {

@@ -6,12 +6,15 @@ export async function up(knex: Knex): Promise<void> {
         table.string('ong_name').notNullable();
         table.string('ong_manager').notNullable();
         table.string('ong_mail').notNullable();
+        table.string('cnpj').notNullable();
         table.string('description');
         table.string('zipcode',10).notNullable();
         table.string('address').notNullable();
         table.integer('number').notNullable();
+        table.string('district')
         table.string('state').notNullable();
         table.string('city').notNullable();
+        table.string('complement')
         table.string('cod_phone',3).notNullable();
         table.string('phone',13).notNullable();
         table.string('password').notNullable();
