@@ -43,6 +43,7 @@ module.exports = (app): void => {
           const ong_id = await OngController.createOng(OngData);      
           return res.status(config.STATUS.CREATED).json(ong_id);      
       } catch (error) {      
+          console.log(error);
           return res.status(config.STATUS.INTERNAL).json({ message: config.INTERAL_ERROR_MSG });
       }
     }
