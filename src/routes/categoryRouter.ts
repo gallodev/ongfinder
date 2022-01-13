@@ -107,8 +107,8 @@ module.exports = (app): void => {
      *        description: Something went wrong with backend
     */
 
-    app.post('/api/category/',create);       
-    app.get('/api/category/',authMiddleware,list);
+    app.post('/api/category/',authMiddleware,create);       
+    app.get('/api/category/',list);
     app.get('/api/category/:id',listById);         
 
 };
